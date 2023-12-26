@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login / Signup</title>
+  <style>
+        body {
+
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .bgimage {
+            height:100vh;
+            background: url('image.jpg') !Important;
+            background-size:cover;
+            background-repeat: no-repeat;
+            position:relative;
+        }
+        .container {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            width: 400px;
+            text-align: center;
+        }
+        .container h2 {
+            margin-bottom: 20px;
+            font-weight: normal;
+        }
+        .container form div {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+        .container form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .container form input[type="text"],
+        .container form input[type="email"],
+        .container form input[type="password"] {
+            width: calc(100% - 12px);
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        .container form input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            background-color: #4caf50;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .container form input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .container p {
+            margin-top: 15px;
+        }
+        .container p a {
+            color: #4caf50;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .container p a:hover {
+            text-decoration: underline;
+        }
+        .hidden {
+            display: none;
+        }
+		.container .footer {
+			margin: 40px 1;
+			color: #888;
+			text-align: center;
+			margin-bottom: 20px;
+            font-weight: normal;
+			font-size: 20px;
+		}
+    </style>
+</head>
+
+<body class="my-login-page">
+<div class="container">
+    <h2>Patient Signup</h2>
+  <form id="signupForm" action="/patientsignupverify" method="post">
+    <div>
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+    <div>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <div>
+      <input type="submit" value="Signup">
+    </div>
+  </form>
+<!--  <p>Already have an account? <a href="#" onclick="toggleForm()">Sign in</a></p> -->
+  <p>Already have an account? <a href="/patient_login">Signin</a></p>
+  
+  <div class="footer">Vijay Hospital - Management System</div>
+</div>
+
+
+<!--<script>
+        function toggleForm() {
+            var signupForm = document.getElementById("signupForm");
+            var signinForm = document.getElementById("signinForm");
+
+            if (signupForm.classList.contains("hidden")) {
+                signupForm.classList.remove("hidden");
+                signinForm.classList.add("hidden");
+            } else {
+                signinForm.classList.remove("hidden");
+                signupForm.classList.add("hidden");
+            }
+        }
+        document.getElementById("signupForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // Perform form submission using fetch or AJAX to your backend
+            // On successful signup, show a popup message
+            // Here's an example using alert for simplicity
+            alert("Signup successful!");
+
+            // You can also customize a popup/modal using a library like Bootstrap modal or create your own custom popup
+        });
+    </script> -->
+</body>
+</html>

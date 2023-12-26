@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Appointment request - Successful!</title>
+</head>
+<body>
+    <h2>You have successfully booked the appointment. Please keep check "Appointment Status" page to know whether your appointment is confirmed by the Hospital Management</h2>
+	<button onclick="goBack()" class="btn btn-primary">Go Back</button>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+
+        // Function to clear form fields
+        function clearForm() {
+            var form = document.getElementById("confirmAppointment");
+            form.reset();
+        }
+
+        // Clear form fields upon page load
+        window.onload = function() {
+            clearForm();
+        }
+    </script>
+
+</body>
+</html>

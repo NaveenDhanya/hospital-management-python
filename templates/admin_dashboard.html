@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Doctor details</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top" style="font-family: 'Poppins', sans-serif;">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand text-capitalize" href="#">
+            <img src="images/image.jpg" width="40" height="40" alt="logo" loading="lazy" class="mr-2">
+            Add Doctor details</a>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="home.html"><i class="fa fa-home mr-1" aria-hidden="true"></i>Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/getappointmentdetails"><i class="fa fa-hospital-o mr-1" aria-hidden="true"></i>My Appointments</a>
+                </li>
+                <button type="button" class="btn btn-warning ml-4">
+                    <i class="fa fa-sign-out"></i>Logout</button>
+            </ul>
+        </div>
+    </nav>
+</header>
+<section>
+    <div class="container">
+        <div class="row flex-lg-nowrap">
+            <div class="col">
+                <div class="row">
+                    <div class="col mb-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="e-profile">
+                                    <div class="row">
+
+                                    </div>
+                                    <ul class="nav nav-tabs">
+                                        <li class="nav-item"><a href="" class="active nav-link">Enter Doctor details</a></li>
+                                    </ul>
+                                    <div class="tab-content pt-3">
+                                        <div class="tab-pane active">
+                                            <form class="form" action="/adddoctordetails" method="post" novalidate="">
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div class="row">
+                                                            <div class="col">
+                                                                <div class="form-group">
+                                                                    <label>Doctor Name</label>
+                                                                    <input id="doctorname" class="form-control" type="text" name="doctorname" placeholder="Doctor Name" required>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col">
+                                                                <div class="form-group">
+                                                                    <label>Phone Number</label>
+                                                                    <input id="phonenumber" class="form-control" type="phonenumber" name="phonenumber" placeholder="Phone Number" maxLength="10" required>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col">
+                                                                <div class="form-group">
+                                                                    <label>Email</label>
+                                                                    <input id="email" class="form-control" type="email" name="email" placeholder="user@example.com" required>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col">
+                                                                <div class="form-group">
+                                                                    <label>Password</label>
+                                                                    <input id="password" class="form-control" type="password" name="password" placeholder="Password" required>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <!--   <div class="col">
+                                                                   <div class="form-group">
+                                                                       <label>Doctor ID</label>
+                                                                       <input id="Doctorid" class="form-control" type="tel" name="doctorid" placeholder="Doctor ID"/>
+                                                                   </div>
+                                                               </div> -->
+                                                            <div class="col">
+                                                                <div class="form-group">
+                                                                    <label>Specialization</label>
+                                                                    <input id="specialization" class="form-control" type="text" name="specialization" placeholder="Specialization">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col d-flex justify-content-end">
+                                                        <button class="btn btn-primary" type="submit">Submit Details</button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>

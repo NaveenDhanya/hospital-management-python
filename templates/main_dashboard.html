@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Portfolio Website - Vijay</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- linking css file -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles/dashboard.css') }}">
+  <!-- bootstrap CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- font awesome -->
+  <script src="https://kit.fontawesome.com/31149d48b0.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg fixed-top navbarScroll">
+        <div class="container">
+            <a class="navbar-brand" href="#">VIJAY HOSPITAL</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="signup">Online Appointment</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">Our Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/main_login">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Emergency Helpline</a>
+                    </li>
+                </ul>
+                
+            </div>
+        </div>
+    </nav>
+ <!-- main banner -->
+    <section class="bgimage" id="home">
+        <div class="container-fluid">
+            <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hero-text">
+                <h2 class="hero_title">Welcome to Vijay Hospital</h2>
+                <p class="hero_desc">A center of compassionate care and excellence in healthcare services</p>
+            </div>
+            </div>
+        </div>
+    </section>
+<!-- about section-->
+    <section id="about">
+        <div class="container mt-4 pt-4">
+            <h1 class="text-center">About Me</h1>
+            <div class="row mt-4">
+
+
+                <div class="col-lg-12">
+                    <p> I am a passionate web and Java developer with a strong background in coding and designing web applications. I'm dedicated to creating user-friendly and visually appealing websites while constantly expanding my knowledge in the world of Java development. In my free time, I enjoy exploring new technologies and experimenting with innovative web solutions. I believe in the power of technology to transform our world, and I'm eager to contribute to this transformation through my work in web and Java development
+                        
+                    </p>
+                    <div class="row mt-3">
+                        <div class="col-md-6">
+                            <ul>
+                                <li>Name: Vijay Muthusamy</li>
+                                <li>Age: 20</li>
+                                <li>Highest Qualification: BCA (Bachelor of Computer Application)</li>
+                                <li>Graduation Year: 2023</li>
+                                <li>Courses: Completed 3 month Full-Time course on Core Java and C++</li>
+                                <li>Occupation: Java Developer(Fresher)</li>
+
+                            </ul>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+<!-- services section-->
+    <section id="services">
+        <div class="container">
+            <h1 class="text-center">Skill set</h1>
+            <div class="row">
+                <div class="col-lg-4 mt-4">
+                    <div class="card servicesText">
+                        <div class="card-body">
+                            <i class="fas servicesIcon fa-clock"></i>
+                            <h4 class="card-title mt-3">Website Development</h4>
+                            <p class="card-text mt-3">Website development using HTML and CSS involves creating web pages with HTML for content structure and CSS for styling and layout, essential for building user-friendly and visually appealing websites.
+                            </p>
+                        </div>
+                    </div>  
+                </div>
+                <div class="col-lg-4 mt-4">
+                    <div class="card servicesText">
+                        <div class="card-body">
+                            <i class='fas servicesIcon fa-layer-group'></i>
+                            <h4 class="card-title mt-3">Website Design</h4>
+                            <p class="card-text mt-3">HTML and CSS are the core tools for web design, with HTML providing structure for content and CSS handling styling and layout, enabling the creation of attractive and user-friendly websites.
+                            </p>
+                        </div>
+                    </div>  
+                </div>
+
+                <div class="col-lg-4 mt-4">
+                    <div class="card servicesText">
+                        <div class="card-body">
+                            <i class='far servicesIcon fa-check-circle'></i>
+                            <h4 class="card-title mt-3">Java Development</h4>
+                            <p class="card-text mt-3">Java development involves using Core Java concepts to create a variety of software applications, making Java a versatile choice for building reliable and scalable solutions.
+                            </p>
+                        </div>
+                    </div>  
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+
+<!-- contact section-->
+    <section id="contact">
+        <div class="container mt-3 contactContent">
+            <h1 class="text-center">Looking for a Business Website? Reach Out to Us!</h1>
+
+            <div class="row mt-4">
+                <div class="col-lg-6">
+                    <!-- to edit google map goto https://www.embed-map.com type your location, generate html code and copy the html  -->
+                    <div style="max-width:100%;overflow:hidden;color:red;width:500px;height:500px;">
+                      <div id="my-map-display" style="height:100%; width:100%;max-width:100%;">
+                        <iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=Chennai,+Tamil+Nadu,+India&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8">
+                        </iframe>
+                      </div>
+                      <a class="embed-map-html" href="https://www.bootstrapskins.com/themes" id="authorize-map-data">premium bootstrap themes</a>
+                      <style>#my-map-display img.text-marker{max-width:none!important;background:none!important;}img{max-width:none}
+                    </style>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <!-- form fields -->
+                    <form action="postdata" method="post">
+                        <input type="text" class="form-control form-control-lg" name="name" placeholder="Name" required>
+                        <input type="email" class="form-control mt-3" name="email" placeholder="Email" required>
+                        <input type="tel" class="form-control mt-3" name="phoneNumber" placeholder="Phone Number" maxlength="10" minlength="10" required>
+                        <input type="text" class="form-control mt-3" name="subject" placeholder="Subject">
+                        <div class="mb-3 mt-3">
+                            <textarea class="form-control" rows="5" id="comment" name="projectDescription" maxlength="100" placeholder="Project Description"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-success mt-3">Submit</button>
+                    </form>
+                    
+                </div>
+
+            </div>
+        </div>
+    </section>
+ <!-- footer section-->
+    <footer id="footer">
+        <div class="container-fluid">
+            <!-- social media icons -->
+            <div class="social-icons mt-4">
+                <a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+    <!-- load javascript after loading all html content -->
+    <script src="script/script.js"></script>
+</body>
+</html>

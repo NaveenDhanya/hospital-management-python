@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Appointment Details</title>
+</head>
+<body>
+<h2>Appointment Details</h2>
+<table border="1" id="appointmentTable">
+    <thead>
+    <tr>
+        <th>Username</th>
+        <th>Phone Number</th>
+        <th>Email</th>
+        <th>Doctor ID</th>
+        <th>Doctor Name</th>
+        <th>Appointment Date</th>
+        <th>Appointment Time</th>
+        <th>Symptoms</th>
+    </tr>
+    </thead>
+    <tbody id="appointmentTableBody">
+    <!-- Data will be dynamically added here -->
+    </tbody>
+</table>
+
+<script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Fetch appointment data from the server
+            fetch('/doctorappointmentdetails')
+                .then(response => response.json())
+                .then(appointments => {
+                    const tableBody = document.getElementById('appointmentTableBody');
+
+                    // Loop through appointments and dynamically create rows
+                    appointments.forEach(appointment => {
+                        const row = document.createElement('tr');
+
+                        // Create cells and set data
+                        Object.values(appointment).forEach(value => {
+                            const cell = document.createElement('td');
+                            cell.textContent = value;
+                            row.appendChild(cell);
+                        });
+
+                        // Append row to the table body
+                        tableBody.appendChild(row);
+                    });
+                })
+                .catch(error => console.error('Error fetching data:', error));
+        });
+    </script>
+</body>
+</html>

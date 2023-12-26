@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointments List</title>
+</head>
+<body>
+    <h1>Appointments List</h1>
+    <table border="1">
+        <thead>
+            <tr>
+				<th>ID</th>
+                <th>Username</th>
+                <th>Phone Number</th>
+                <th>Email</th>
+                <th>Doctor ID</th>
+				<th>Doctor Name</th>
+				<th>Appointment Date</th>
+				<th>Appointment Time</th>
+				<th>Symptoms</th>
+				<th>Status</th>
+                <!-- Add other appointment fields here -->
+            </tr>
+        </thead>
+        <tbody>
+            {% for appointment in appointments %}
+            <tr>
+                <td>{{ appointment[0] }}</td>  <!-- Assuming the first column is ID -->
+                <td>{{ appointment[1] }}</td>  <!-- Assuming the second column is Patient Name -->
+                <td>{{ appointment[2] }}</td>  <!-- Assuming the third column is Doctor Name -->
+                <td>{{ appointment[3] }}</td>  <!-- Assuming the fourth column is Date -->
+				<td>{{ appointment[4] }}</td>
+	            <td>{{ appointment[5] }}</td>
+		        <td>{{ appointment[6] }}</td>
+	            <td>{{ appointment[7] }}</td>
+				<td>{{ appointment[8] }}</td>
+				<td>{{ appointment[9] }}</td>
+
+                <!-- Add other appointment fields here -->
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
